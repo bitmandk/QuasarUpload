@@ -27,7 +27,7 @@
                     files.map((v) => ({
                         ...v,
                         docType,
-                        remarks: null,
+                        remarks: null
                     }))
                 );
             },
