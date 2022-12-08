@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons+Outlined" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.10.2/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="vueupload">
+        <div class="q-pa-md">
+            <documentupload></documentupload>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.10.2/dist/quasar.umd.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.10.2/dist/lang/da.umd.prod.js"></script>
+    <script src="vue-loader-init.js"></script>
+    <script>
+        const data = {
+        }
+        const app = Vue.createApp({
+            data() {
+                return data
+            },
+            components: {
+                'documentupload': Vue.defineAsyncComponent(() => loadModule('upload.vue', options))
+            }
+        });
+        app.config.debug = true
+        app.config.devtools = true
+        app.use(Quasar)
+        const myVueApp = app.mount('#vueupload')
+    </script>
+</body>
+</html>
