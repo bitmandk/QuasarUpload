@@ -46,8 +46,8 @@
                     { name: 'DocumentType', value: file.docType.value },
                     { name: 'Remarks', value: file.remarks },
                 ];
-            },
-        },
+            }
+        }
     };
 </script>
 <template>
