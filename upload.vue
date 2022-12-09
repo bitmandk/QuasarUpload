@@ -7,7 +7,7 @@
                     { value: 1, label: 'Type 1' },
                     { value: 2, label: 'Type 2' },
                 ],
-                caseGuid: '686296F3-EEC5-4331-8A32-C885815297F6',
+                caseGuid: '686296F3-EEC5-4331-8A32-C885815297F6'
             };
         },
         computed: {
